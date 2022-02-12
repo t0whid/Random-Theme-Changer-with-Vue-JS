@@ -1,26 +1,67 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  
+  <ThemeChanger/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ThemeChanger from './components/ThemeChanger.vue'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    ThemeChanger
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	background-color: rgb(0, 0, 0);
+	width: 100vw;
+	height: 100vh;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	padding: 1rem 3rem;
+	margin: 1rem 0;
+	outline: none;
+	background-color: #000;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 0.25rem;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #000;
+}
+
+h1 {
+	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+		1px 1px 0 #fff;
+	text-align: center;
 }
 </style>
